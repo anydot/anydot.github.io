@@ -1,0 +1,7 @@
+languageCode = "en-us"
+title = "Anydot's blog"
+baseurl = "http://anydot.in/"
+theme = "hugo-theme-blueberry-detox"
+
+[Params]
+    disqusShortname = "ranydot"
