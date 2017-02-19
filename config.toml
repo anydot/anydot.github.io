@@ -1,7 +1,13 @@
 languageCode = "en-us"
 title = "Anydot's blog"
 baseurl = "http://anydot.in/"
-theme = "hugo-theme-blueberry-detox"
+theme = "hugo-theme-geppaku"
 
-[Params]
+[author]
+    name = "Premysl Hruby"
+    twitter = "anydot"
+    github = "anydot"
+    linkedin = "přemysl-hrubý-aa340539"
+
+[params]
     disqusShortname = "ranydot"
