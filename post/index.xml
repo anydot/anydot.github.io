@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Anydot&#39;s blog</title>
+    <link>http://anydot.in/post/index.xml</link>
+    <description>Recent content in Posts on Anydot&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 08 Dec 2014 18:10:00 +0100</lastBuildDate>
+    <atom:link href="http://anydot.in/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>git clean -fdx for SVN -- how to cleanup untracked files from SVN workdir</title>
+      <link>http://anydot.in/post/2014-12-08-git-clean-fdx-for-svn-how-to-cleanup-untracked-files-from-svn-workdir/</link>
+      <pubDate>Mon, 08 Dec 2014 18:10:00 +0100</pubDate>
+      
+      <guid>http://anydot.in/post/2014-12-08-git-clean-fdx-for-svn-how-to-cleanup-untracked-files-from-svn-workdir/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Cleanup files untracked by SVN
+svn status --xml --no-ignore  | xmlstarlet sel -t -v &#39;/status/target/entry[wc-status[@item=&amp;quot;unversioned&amp;quot; or @item=&amp;quot;ignored&amp;quot;]][@path!=&amp;quot;.git&amp;quot;]/@path&#39; | xargs rm -fr
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Setting up VirtualBox for NAT DNS</title>
+      <link>http://anydot.in/post/2013-06-21-setting-up-virtualbox-for-nat-dns/</link>
+      <pubDate>Fri, 21 Jun 2013 18:10:00 +0100</pubDate>
+      
+      <guid>http://anydot.in/post/2013-06-21-setting-up-virtualbox-for-nat-dns/</guid>
+      <description>&lt;p&gt;Sometimes it can be useful to use host for resolving instead of guest directly contacting DNS network in the current network; in case you are changing DNS servers a lot (imagine notebook and changing networks)
+or in cases where there&amp;rsquo;s VPN tunnel involved with split-routing; it can be useful to use host for resolving instead of guest directly contacting DNS network in the current network.
+Note this only works if you use NAT type of network in Virtualbox.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Shutdown given guest&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$ VBoxManage modifyvm &amp;quot;Virtual machine name&amp;quot; --natdnsproxy1 on --natdnshostresolver1 on&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Profit&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to install OpenSSH server on windows</title>
+      <link>http://anydot.in/post/2013-05-30-cygwin-ssh-server/</link>
+      <pubDate>Thu, 30 May 2013 18:10:00 +0100</pubDate>
+      
+      <guid>http://anydot.in/post/2013-05-30-cygwin-ssh-server/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;ccygwin openssh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ssh-host-config -y; cygrunsrv -S sshd&lt;/code&gt; as Admin
+    * When asked for value of CYGWIN value, enter: tty ntsec
+    * This will create cyg_server local account if it isn&amp;rsquo;t available yet&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ssh-user-config&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;netsh advfirewall firewall add rule name=&amp;quot;OpenSSH&amp;quot; dir=in action=allow protocol=TCP localport=22&lt;/code&gt; to allow incomming SSH connections&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
