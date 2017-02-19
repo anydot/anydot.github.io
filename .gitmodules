@@ -1,3 +1,7 @@
 [submodule "themes/hugo-theme-blueberry-detox"]
 	path = themes/hugo-theme-blueberry-detox
 	url = https://github.com/allnightgrocery/hugo-theme-blueberry-detox.git
+[submodule "public"]
+	path = public
+	url = https://github.com/anydot/anydot.github.io.git
+	branch = gh-pages
