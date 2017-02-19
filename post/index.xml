@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 08 Dec 2014 18:10:00 +0100</lastBuildDate>
-    <atom:link href="http://anydot.in/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>git clean -fdx for SVN -- how to cleanup untracked files from SVN workdir</title>
@@ -15,10 +15,7 @@
       <pubDate>Mon, 08 Dec 2014 18:10:00 +0100</pubDate>
       
       <guid>http://anydot.in/post/2014-12-08-git-clean-fdx-for-svn-how-to-cleanup-untracked-files-from-svn-workdir/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Cleanup files untracked by SVN
-svn status --xml --no-ignore  | xmlstarlet sel -t -v &#39;/status/target/entry[wc-status[@item=&amp;quot;unversioned&amp;quot; or @item=&amp;quot;ignored&amp;quot;]][@path!=&amp;quot;.git&amp;quot;]/@path&#39; | xargs rm -fr
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description># Cleanup files untracked by SVN svn status --xml --no-ignore | xmlstarlet sel -t -v &#39;/status/target/entry[wc-status[@item=&amp;quot;unversioned&amp;quot; or @item=&amp;quot;ignored&amp;quot;]][@path!=&amp;quot;.git&amp;quot;]/@path&#39; | xargs rm -fr  </description>
     </item>
     
     <item>
@@ -27,16 +24,7 @@ svn status --xml --no-ignore  | xmlstarlet sel -t -v &#39;/status/target/entry[w
       <pubDate>Fri, 21 Jun 2013 18:10:00 +0100</pubDate>
       
       <guid>http://anydot.in/post/2013-06-21-setting-up-virtualbox-for-nat-dns/</guid>
-      <description>&lt;p&gt;Sometimes it can be useful to use host for resolving instead of guest directly contacting DNS network in the current network; in case you are changing DNS servers a lot (imagine notebook and changing networks)
-or in cases where there&amp;rsquo;s VPN tunnel involved with split-routing; it can be useful to use host for resolving instead of guest directly contacting DNS network in the current network.
-Note this only works if you use NAT type of network in Virtualbox.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Shutdown given guest&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;$ VBoxManage modifyvm &amp;quot;Virtual machine name&amp;quot; --natdnsproxy1 on --natdnshostresolver1 on&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Profit&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <description>Sometimes it can be useful to use host for resolving instead of guest directly contacting DNS network in the current network; in case you are changing DNS servers a lot (imagine notebook and changing networks) or in cases where there&amp;rsquo;s VPN tunnel involved with split-routing; it can be useful to use host for resolving instead of guest directly contacting DNS network in the current network. Note this only works if you use NAT type of network in Virtualbox.</description>
     </item>
     
     <item>
@@ -45,15 +33,7 @@ Note this only works if you use NAT type of network in Virtualbox.&lt;/p&gt;
       <pubDate>Thu, 30 May 2013 18:10:00 +0100</pubDate>
       
       <guid>http://anydot.in/post/2013-05-30-cygwin-ssh-server/</guid>
-      <description>&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;ccygwin openssh&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ssh-host-config -y; cygrunsrv -S sshd&lt;/code&gt; as Admin
-    * When asked for value of CYGWIN value, enter: tty ntsec
-    * This will create cyg_server local account if it isn&amp;rsquo;t available yet&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ssh-user-config&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;netsh advfirewall firewall add rule name=&amp;quot;OpenSSH&amp;quot; dir=in action=allow protocol=TCP localport=22&lt;/code&gt; to allow incomming SSH connections&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <description> ccygwin openssh ssh-host-config -y; cygrunsrv -S sshd as Admin * When asked for value of CYGWIN value, enter: tty ntsec * This will create cyg_server local account if it isn&amp;rsquo;t available yet ssh-user-config netsh advfirewall firewall add rule name=&amp;quot;OpenSSH&amp;quot; dir=in action=allow protocol=TCP localport=22 to allow incomming SSH connections  </description>
     </item>
     
   </channel>
