@@ -2,8 +2,11 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>How to install OpenSSH server on windows</title>
+		<title>Categories</title>
 		<meta name="viewport" content="width=device-width">
+		
+			<link href="/categories/index.xml" rel="alternate" type="application/rss+xml" title="Anydot&#39;s blog" />
+			<link href="/categories/index.xml" rel="feed" type="application/rss+xml" title="Anydot&#39;s blog" />
 		
 		<link rel="stylesheet" href="http://anydot.in/css/hybrid.css">
 		<link rel="stylesheet" href="http://anydot.in/css/style.css">
@@ -27,21 +30,10 @@
 
 			<div id="content">
 				
-	<article class="post">
-		<h1><a href="http://anydot.in/post/2013-05-30-cygwin-ssh-server/">How to install OpenSSH server on windows</a> </h1>
+	
 
-		<div class="post-content"><ol>
-<li><code>ccygwin openssh</code></li>
-<li><code>ssh-host-config -y; cygrunsrv -S sshd</code> as Admin
-    * When asked for value of CYGWIN value, enter: tty ntsec
-    * This will create cyg_server local account if it isn&rsquo;t available yet</li>
-<li><code>ssh-user-config</code></li>
-<li><code>netsh advfirewall firewall add rule name=&quot;OpenSSH&quot; dir=in action=allow protocol=TCP localport=22</code> to allow incomming SSH connections</li>
-</ol>
-</div>
+	
 
-		<p class="meta">Posted on <span class="postdate">30. May 2013</span></p>
-	</article>
 
 			</div>
 
