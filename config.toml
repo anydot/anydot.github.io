@@ -11,3 +11,17 @@ theme = "solar"
 
 [params]
     disqusShortname = "ranydot"
+
+
+[menu]
+    [[menu.1main]]
+    name = "Feed"
+    url = "/index.html"
+
+    [[menu.2twitter]]
+    name = "Twitter"
+    url = "https://twitter.com/anydot"
+
+    [[menu.3linkedin]]
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/in/p%C5%99emysl-hrub%C3%BD-aa340539/"
