@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://anydot.in/post/2019-06-11-autossh-systemd-for-smtp-tunneling/</loc>
+    <lastmod>2019-06-11T13:25:58+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://anydot.in/post/2014-12-08-git-clean-fdx-for-svn-how-to-cleanup-untracked-files-from-svn-workdir/</loc>
     <lastmod>2014-12-08T18:10:00+01:00</lastmod>
   </url>
@@ -19,7 +24,7 @@
   
   <url>
     <loc>http://anydot.in/</loc>
-    <lastmod>2014-12-08T18:10:00+01:00</lastmod>
+    <lastmod>2019-06-11T13:25:58+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -30,7 +35,7 @@
   
   <url>
     <loc>http://anydot.in/post/</loc>
-    <lastmod>2014-12-08T18:10:00+01:00</lastmod>
+    <lastmod>2019-06-11T13:25:58+00:00</lastmod>
     <priority>0</priority>
   </url>
   
