@@ -1,13 +1,7 @@
-[submodule "themes/hugo-theme-blueberry-detox"]
-	path = themes/hugo-theme-blueberry-detox
-	url = https://github.com/allnightgrocery/hugo-theme-blueberry-detox.git
 [submodule "public"]
 	path = public
-	url = https://github.com/anydot/anydot.github.io.git
+	url = git@github.com:anydot/anydot.github.io.git
 	branch = master
-[submodule "themes/heather-hugo"]
-	path = themes/heather-hugo
-	url = https://github.com/hbpasti/heather-hugo.git
-[submodule "themes/hugo-theme-geppaku"]
-	path = themes/hugo-theme-geppaku
-	url = https://github.com/masa0221/hugo-theme-geppaku
+[submodule "themes/solar"]
+	path = themes/solar
+	url = https://github.com/bake/solar-theme-hugo.git
