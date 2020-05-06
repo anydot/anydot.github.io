@@ -1,0 +1,23 @@
+languageCode: en-us
+title: Anydot's blog
+baseurl: http://anydot.in/
+theme: solar
+
+author:
+    name: Premysl Hruby
+    twitter: anydot
+    github: anydot
+    linkedin: přemysl-hrubý-aa340539
+
+params:
+    disqusShortname: ranydot
+
+menu:
+    main:
+    - name: Twitter
+      url: https://twitter.com/anydot
+    - name: LinkedIn
+      url: https://www.linkedin.com/in/p%C5%99emysl-hrub%C3%BD-aa340539/
+    - name: RSS Feed
+      url: /index.xml
+

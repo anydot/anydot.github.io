@@ -1,6 +1,8 @@
 ---
 title: "Shrinking WSL2 volume"
 date: 2020-05-06T10:41:18+02:00
+tags:
+- wsl
 ---
 
 As WSL2 uses EXT4 in VHD volume, the VHDs size can grow in time as one uses the WSL. Deleting files isn't enough and one has to zero-out the free blocks and run the VHD compaction.
