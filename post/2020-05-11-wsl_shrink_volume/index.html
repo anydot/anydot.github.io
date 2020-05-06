@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>git clean -fdx for SVN -- how to cleanup untracked files from SVN workdir</title>
+		<title>Shrinking WSL2 volume</title>
 		<meta name="viewport" content="width=device-width">
 		
 		<link rel="stylesheet" href="http://anydot.in/css/hybrid.css">
@@ -46,13 +46,20 @@
 			<div id="content">
 				
 	<article class="post">
-		<h1><a href="http://anydot.in/post/2014-12-08-git-clean-fdx-for-svn-how-to-cleanup-untracked-files-from-svn-workdir/">git clean -fdx for SVN -- how to cleanup untracked files from SVN workdir</a> </h1>
+		<h1><a href="http://anydot.in/post/2020-05-11-wsl_shrink_volume/">Shrinking WSL2 volume</a> </h1>
 
-		<div class="post-content"><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Cleanup files untracked by SVN</span>
-svn status --xml --no-ignore  | xmlstarlet sel -t -v <span style="color:#e6db74">&#39;/status/target/entry[wc-status[@item=&#34;unversioned&#34; or @item=&#34;ignored&#34;]][@path!=&#34;.git&#34;]/@path&#39;</span> | xargs rm -fr
+		<div class="post-content"><p>As WSL2 uses EXT4 in VHD volume, the VHDs size can grow in time as one uses the WSL. Deleting files isn&rsquo;t enough and one has to zero-out the free blocks and run the VHD compaction.</p>
+<p>From WSL2 console:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mount /dev/sdb -o remount,ro
+zerofree -v /dev/sdb
+</code></pre></div><p>From the Windows host&rsquo;s Admin powershell:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-posh" data-lang="posh"><span style="color:#75715e"># Install the HyperV management and powershell optional features</span>
+wsl --shutdown
+Import-Module -Name Hyper-v
+Optimize-VHD -Mode Full -Verbose $env:LOCALAPPDATA\Packages\$((Get-AppxPackage *Ubuntu*).PackageFamilyName)\LocalState\ext4.vhdx
 </code></pre></div></div>
 
-		<p class="meta">Posted on <span class="postdate">08. December 2014</span></p>
+		<p class="meta">Posted on <span class="postdate">06. May 2020</span></p>
 	</article>
 
 			</div>

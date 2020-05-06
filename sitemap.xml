@@ -1,6 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://anydot.in/</loc>
+    <lastmod>2020-05-06T10:41:18+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anydot.in/post/</loc>
+    <lastmod>2020-05-06T10:41:18+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anydot.in/post/2020-05-11-wsl_shrink_volume/</loc>
+    <lastmod>2020-05-06T10:41:18+02:00</lastmod>
+  </url>
   
   <url>
     <loc>http://anydot.in/post/2019-06-11-autossh-systemd-for-smtp-tunneling/</loc>
@@ -23,25 +38,11 @@
   </url>
   
   <url>
-    <loc>http://anydot.in/</loc>
-    <lastmod>2019-06-11T13:25:58+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://anydot.in/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://anydot.in/post/</loc>
-    <lastmod>2019-06-11T13:25:58+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://anydot.in/tags/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>

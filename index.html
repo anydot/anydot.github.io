@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="generator" content="Hugo 0.52" />
+	<meta name="generator" content="Hugo 0.69.2" />
 		<meta charset="utf-8">
 		<title>Anydot&#39;s blog</title>
 		<meta name="viewport" content="width=device-width">
@@ -51,6 +51,19 @@
 				
 	
 		<article class="post">
+			<h1><a href="http://anydot.in/post/2020-05-11-wsl_shrink_volume/">Shrinking WSL2 volume</a> </h1>
+
+			<div class="post-content">
+				<p>As WSL2 uses EXT4 in VHD volume, the VHDs size can grow in time as one uses the WSL. Deleting files isn&rsquo;t enough and one has to zero-out the free blocks and run the VHD compaction.
+From WSL2 console:
+mount /dev/sdb -o remount,ro zerofree -v /dev/sdb From the Windows host&rsquo;s Admin powershell:
+# Install the HyperV management and powershell optional features wsl --shutdown Import-Module -Name Hyper-v Optimize-VHD -Mode Full -Verbose $env:LOCALAPPDATA\Packages\$((Get-AppxPackage *Ubuntu*).  … </p>
+			</div>
+
+			<p class="meta">Posted on <span class="postdate">06. May 2020</span></p>
+		</article>
+	
+		<article class="post">
 			<h1><a href="http://anydot.in/post/2019-06-11-autossh-systemd-for-smtp-tunneling/">Using autossh, systemd and restirected ssh forwarding for tunneling SMTP</a> </h1>
 
 			<div class="post-content">
@@ -65,7 +78,7 @@
 			<h1><a href="http://anydot.in/post/2014-12-08-git-clean-fdx-for-svn-how-to-cleanup-untracked-files-from-svn-workdir/">git clean -fdx for SVN -- how to cleanup untracked files from SVN workdir</a> </h1>
 
 			<div class="post-content">
-				<p># Cleanup files untracked by SVN svn status --xml --no-ignore | xmlstarlet sel -t -v '/status/target/entry[wc-status[@item=&quot;unversioned&quot; or @item=&quot;ignored&quot;]][@path!=&quot;.git&quot;]/@path' | xargs rm -fr   </p>
+				<p># Cleanup files untracked by SVN svn status --xml --no-ignore | xmlstarlet sel -t -v &#39;/status/target/entry[wc-status[@item=&#34;unversioned&#34; or @item=&#34;ignored&#34;]][@path!=&#34;.git&#34;]/@path&#39; | xargs rm -fr  </p>
 			</div>
 
 			<p class="meta">Posted on <span class="postdate">08. December 2014</span></p>

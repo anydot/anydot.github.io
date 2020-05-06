@@ -51,8 +51,8 @@
 		<div class="post-content"><ol>
 <li><code>ccygwin openssh</code></li>
 <li><code>ssh-host-config -y; cygrunsrv -S sshd</code> as Admin
-    * When asked for value of CYGWIN value, enter: tty ntsec
-    * This will create cyg_server local account if it isn&rsquo;t available yet</li>
+* When asked for value of CYGWIN value, enter: tty ntsec
+* This will create cyg_server local account if it isn&rsquo;t available yet</li>
 <li><code>ssh-user-config</code></li>
 <li><code>netsh advfirewall firewall add rule name=&quot;OpenSSH&quot; dir=in action=allow protocol=TCP localport=22</code> to allow incomming SSH connections</li>
 </ol>

@@ -48,10 +48,9 @@
 	<article class="post">
 		<h1><a href="http://anydot.in/post/2013-06-21-setting-up-virtualbox-for-nat-dns/">Setting up VirtualBox for NAT DNS</a> </h1>
 
-		<div class="post-content"><p>Sometimes it can be useful to use host for resolving instead of guest directly contacting DNS network in the current network; in case you are changing DNS servers a lot (imagine notebook and changing networks)
+		<div class="post-content"><p>Sometimes it can be useful to use host for resolving instead of guest directly contacting DNS network in the current network; in case you are changing DNS servers a lot (imagine notebook and changing networks) 
 or in cases where there&rsquo;s VPN tunnel involved with split-routing; it can be useful to use host for resolving instead of guest directly contacting DNS network in the current network.
 Note this only works if you use NAT type of network in Virtualbox.</p>
-
 <ol>
 <li>Shutdown given guest</li>
 <li><code>$ VBoxManage modifyvm &quot;Virtual machine name&quot; --natdnsproxy1 on --natdnshostresolver1 on</code></li>

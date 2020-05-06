@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Anydot&#39;s blog</title>
@@ -6,10 +6,22 @@
     <description>Recent content on Anydot&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Jun 2019 13:25:58 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2020 10:41:18 +0200</lastBuildDate>
     
 	<atom:link href="http://anydot.in/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Shrinking WSL2 volume</title>
+      <link>http://anydot.in/post/2020-05-11-wsl_shrink_volume/</link>
+      <pubDate>Wed, 06 May 2020 10:41:18 +0200</pubDate>
+      
+      <guid>http://anydot.in/post/2020-05-11-wsl_shrink_volume/</guid>
+      <description>As WSL2 uses EXT4 in VHD volume, the VHDs size can grow in time as one uses the WSL. Deleting files isn&amp;rsquo;t enough and one has to zero-out the free blocks and run the VHD compaction.
+From WSL2 console:
+mount /dev/sdb -o remount,ro zerofree -v /dev/sdb From the Windows host&amp;rsquo;s Admin powershell:
+# Install the HyperV management and powershell optional features wsl --shutdown Import-Module -Name Hyper-v Optimize-VHD -Mode Full -Verbose $env:LOCALAPPDATA\Packages\$((Get-AppxPackage *Ubuntu*).</description>
+    </item>
     
     <item>
       <title>Using autossh, systemd and restirected ssh forwarding for tunneling SMTP</title>
@@ -27,7 +39,7 @@ a dial-up line and thus Google rejects all the emails I&amp;rsquo;m trying to se
       <pubDate>Mon, 08 Dec 2014 18:10:00 +0100</pubDate>
       
       <guid>http://anydot.in/post/2014-12-08-git-clean-fdx-for-svn-how-to-cleanup-untracked-files-from-svn-workdir/</guid>
-      <description># Cleanup files untracked by SVN svn status --xml --no-ignore | xmlstarlet sel -t -v &#39;/status/target/entry[wc-status[@item=&amp;quot;unversioned&amp;quot; or @item=&amp;quot;ignored&amp;quot;]][@path!=&amp;quot;.git&amp;quot;]/@path&#39; | xargs rm -fr  </description>
+      <description># Cleanup files untracked by SVN svn status --xml --no-ignore | xmlstarlet sel -t -v &amp;#39;/status/target/entry[wc-status[@item=&amp;#34;unversioned&amp;#34; or @item=&amp;#34;ignored&amp;#34;]][@path!=&amp;#34;.git&amp;#34;]/@path&amp;#39; | xargs rm -fr </description>
     </item>
     
     <item>
