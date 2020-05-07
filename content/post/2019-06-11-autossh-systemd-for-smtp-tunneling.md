@@ -1,7 +1,6 @@
 ---
 title: "Using autossh, systemd and restirected ssh forwarding for tunneling SMTP"
 date: 2019-06-11T13:25:58Z
-draft: false
 ---
 
 I didn't want to turn a full-blow MTA on my RaspberryPI and decided to give the Dragonfly MTA a try. Unfortunately my home DSL line IP block is properly marked as
@@ -29,7 +28,7 @@ Created symlink /etc/systemd/system/multi-user.target.wants/autossh-smtp.service
 
 ```
 Authorized keys
-restrict,port-forwarding,permitopen="127.0.0.1:25",command="/bin/true" ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJmSOrHQJ8JBumzj7Psyl3pThu6KQBdJhiLps0uvZgTa root@raspberrypi
+restrict,port-forwarding,permitopen="127.0.0.1:25",command="/bin/true" ssh-ed25519 AAAremoveZGtA root@raspberrypi
 ```
 
 

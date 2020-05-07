@@ -1,7 +1,6 @@
 ---
-title: "2019 08 22 Sshd Portknock"
+title: "SSHD & Portknock"
 date: 2019-08-22T12:07:39Z
-draft: true
 ---
 
 ```
@@ -9,7 +8,7 @@ draft: true
 UseSyslog
 
 [openSSH]
-sequence    = 60030,60035,60040
+sequence    = 1,2,3
 seq_timeout = 5
 command     = /sbin/ipset add sshd -exist %IP%
 tcpflags    = syn
