@@ -1,7 +1,3 @@
-[submodule "public"]
-	path = public
-	url = https://github.com/anydot/anydot.github.io.git
-	branch = master
 [submodule "themes/solar"]
 	path = themes/solar
 	url = https://github.com/bake/solar-theme-hugo.git
