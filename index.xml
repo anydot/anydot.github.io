@@ -6,10 +6,28 @@
     <description>Recent content on Anydot&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 May 2020 10:41:18 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 07 May 2020 13:42:20 +0200</lastBuildDate>
     
 	<atom:link href="http://anydot.in/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Chocolatey packages</title>
+      <link>http://anydot.in/post/2020-05-11-chocolatey/</link>
+      <pubDate>Thu, 07 May 2020 13:42:20 +0200</pubDate>
+      
+      <guid>http://anydot.in/post/2020-05-11-chocolatey/</guid>
+      <description>&lt;p&gt;My installed Chocolatey packages&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Powershell profile</title>
+      <link>http://anydot.in/post/2020-05-07-powershell_profile/</link>
+      <pubDate>Thu, 07 May 2020 13:33:41 +0200</pubDate>
+      
+      <guid>http://anydot.in/post/2020-05-07-powershell_profile/</guid>
+      <description>&lt;p&gt;Powershell profile&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Shrinking WSL2 volume</title>

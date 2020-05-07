@@ -2,11 +2,11 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Tags</title>
+		<title>wsl</title>
 		<meta name="viewport" content="width=device-width">
 		
-			<link href="/tags/index.xml" rel="alternate" type="application/rss+xml" title="Anydot&#39;s blog" />
-			<link href="/tags/index.xml" rel="feed" type="application/rss+xml" title="Anydot&#39;s blog" />
+			<link href="/tags/wsl/index.xml" rel="alternate" type="application/rss+xml" title="Anydot&#39;s blog" />
+			<link href="/tags/wsl/index.xml" rel="feed" type="application/rss+xml" title="Anydot&#39;s blog" />
 		
 		<link rel="stylesheet" href="http://anydot.in/css/hybrid.css">
 		<link rel="stylesheet" href="http://anydot.in/css/style.css">
@@ -42,10 +42,13 @@
 				
 	
 		<article class="post">
-			<h1><a href="http://anydot.in/tags/wsl/">wsl</a> </h1>
+			<h1><a href="http://anydot.in/post/2020-05-11-wsl_shrink_volume/">Shrinking WSL2 volume</a> </h1>
 
 			<div class="post-content">
-				<p> </p>
+				<p>As WSL2 uses EXT4 in VHD volume, the VHDs size can grow in time as one uses the WSL. Deleting files isn&rsquo;t enough and one has to zero-out the free blocks and run the VHD compaction.
+From WSL2 console:
+mount /dev/sdb -o remount,ro zerofree -v /dev/sdb From the Windows host&rsquo;s Admin powershell:
+# Install the HyperV management and powershell optional features wsl --shutdown Import-Module -Name Hyper-v Optimize-VHD -Mode Full -Verbose $env:LOCALAPPDATA\Packages\$((Get-AppxPackage *Ubuntu*).  … </p>
 			</div>
 
 			<p class="meta">Posted on <span class="postdate">06. May 2020</span></p>

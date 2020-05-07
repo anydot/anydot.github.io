@@ -4,16 +4,36 @@
   
   <url>
     <loc>http://anydot.in/</loc>
-    <lastmod>2020-05-06T10:41:18+02:00</lastmod>
+    <lastmod>2020-05-07T13:42:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anydot.in/post/2020-05-11-chocolatey/</loc>
+    <lastmod>2020-05-07T13:42:20+02:00</lastmod>
   </url>
   
   <url>
     <loc>http://anydot.in/post/</loc>
-    <lastmod>2020-05-06T10:41:18+02:00</lastmod>
+    <lastmod>2020-05-07T13:42:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anydot.in/post/2020-05-07-powershell_profile/</loc>
+    <lastmod>2020-05-07T13:33:41+02:00</lastmod>
   </url>
   
   <url>
     <loc>http://anydot.in/post/2020-05-11-wsl_shrink_volume/</loc>
+    <lastmod>2020-05-06T10:41:18+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anydot.in/tags/</loc>
+    <lastmod>2020-05-06T10:41:18+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anydot.in/tags/wsl/</loc>
     <lastmod>2020-05-06T10:41:18+02:00</lastmod>
   </url>
   
@@ -39,10 +59,6 @@
   
   <url>
     <loc>http://anydot.in/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>http://anydot.in/tags/</loc>
   </url>
   
 </urlset>

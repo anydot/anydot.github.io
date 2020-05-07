@@ -2,11 +2,8 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Tags</title>
+		<title>Powershell profile</title>
 		<meta name="viewport" content="width=device-width">
-		
-			<link href="/tags/index.xml" rel="alternate" type="application/rss+xml" title="Anydot&#39;s blog" />
-			<link href="/tags/index.xml" rel="feed" type="application/rss+xml" title="Anydot&#39;s blog" />
 		
 		<link rel="stylesheet" href="http://anydot.in/css/hybrid.css">
 		<link rel="stylesheet" href="http://anydot.in/css/style.css">
@@ -40,20 +37,19 @@
 
 			<div id="content">
 				
-	
-		<article class="post">
-			<h1><a href="http://anydot.in/tags/wsl/">wsl</a> </h1>
+	<article class="post">
+		<h1><a href="http://anydot.in/post/2020-05-07-powershell_profile/">Powershell profile</a> </h1>
 
-			<div class="post-content">
-				<p> </p>
-			</div>
+		<div class="post-content"><p>Powershell profile</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-posh" data-lang="posh">Set-Alias -Name subl -Value <span style="color:#e6db74">&#34;$Env:ProgramFiles\Sublime Text 3\subl.exe&#34;</span>
+Set-PSReadlineKeyHandler -Key Tab -Function Complete
+Set-PSReadlineKeyHandler -Key Ctrl+d -Function DeleteCharOrExit
 
-			<p class="meta">Posted on <span class="postdate">06. May 2020</span></p>
-		</article>
-	
+Import-Module Posh-Git
+</code></pre></div></div>
 
-	
-
+		<p class="meta">Posted on <span class="postdate">07. May 2020</span></p>
+	</article>
 
 			</div>
 
