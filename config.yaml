@@ -1,7 +1,7 @@
 languageCode: en-us
 title: Anydot's blog
 baseurl: https://anydot.in/
-theme: solar
+theme: axiom
 
 author:
     name: Premysl Hruby
