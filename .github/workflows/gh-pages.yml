@@ -13,9 +13,6 @@ jobs:
       with:
         submodules: true
 
-    - name: Tmate session
-      uses: mxschmitt/action-tmate@v2
-
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
       with:
