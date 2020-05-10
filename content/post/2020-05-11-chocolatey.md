@@ -15,6 +15,7 @@ microsoft-teams.install
 microsoft-windows-terminal
 plantuml
 powershell-core
+rescuetime
 skype
 smplayer
 spotify
