@@ -7,9 +7,11 @@ on:
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
+    timeout-minutes: 10
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout repo
+      uses: actions/checkout@v2
       with:
         submodules: true
 
@@ -20,7 +22,10 @@ jobs:
         extended: true
 
     - name: Build
-      run: hugo --gc --minify --cleanDestinationDir
+      run: |
+        sudo apt install -y ltrace
+        ltrace hugo --gc --minify --cleanDestinationDir
+
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
