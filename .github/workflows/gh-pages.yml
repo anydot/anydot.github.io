@@ -15,17 +15,11 @@ jobs:
       with:
         submodules: true
 
-    - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2
+    - name: Run Hugo
+      uses: klakegg/actions-hugo@1.0.0
       with:
-        hugo-version: '0.76.0'
-        extended: true
-
-    - name: Build
-      run: |
-        sudo apt install -y ltrace
-        ltrace hugo --gc --minify --cleanDestinationDir
-
+        image: ext-alpine
+        env: production
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
