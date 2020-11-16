@@ -2,39 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Anydot&#39;s blog</title>
-    <link>http://anydot.in/post/</link>
+    <link>https://anydot.in/post/</link>
     <description>Recent content in Posts on Anydot&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 May 2020 13:42:20 +0200</lastBuildDate>
-    
-	<atom:link href="http://anydot.in/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 07 May 2020 13:42:20 +0200</lastBuildDate><atom:link href="https://anydot.in/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Chocolatey packages</title>
-      <link>http://anydot.in/post/2020-05-11-chocolatey/</link>
+      <link>https://anydot.in/post/2020-05-11-chocolatey/</link>
       <pubDate>Thu, 07 May 2020 13:42:20 +0200</pubDate>
       
-      <guid>http://anydot.in/post/2020-05-11-chocolatey/</guid>
+      <guid>https://anydot.in/post/2020-05-11-chocolatey/</guid>
       <description>&lt;p&gt;My installed Chocolatey packages&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Powershell profile</title>
-      <link>http://anydot.in/post/2020-05-07-powershell_profile/</link>
+      <link>https://anydot.in/post/2020-05-07-powershell_profile/</link>
       <pubDate>Thu, 07 May 2020 13:33:41 +0200</pubDate>
       
-      <guid>http://anydot.in/post/2020-05-07-powershell_profile/</guid>
+      <guid>https://anydot.in/post/2020-05-07-powershell_profile/</guid>
       <description>&lt;p&gt;Powershell profile&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Shrinking WSL2 volume</title>
-      <link>http://anydot.in/post/2020-05-11-wsl_shrink_volume/</link>
+      <link>https://anydot.in/post/2020-05-11-wsl_shrink_volume/</link>
       <pubDate>Wed, 06 May 2020 10:41:18 +0200</pubDate>
       
-      <guid>http://anydot.in/post/2020-05-11-wsl_shrink_volume/</guid>
+      <guid>https://anydot.in/post/2020-05-11-wsl_shrink_volume/</guid>
       <description>As WSL2 uses EXT4 in VHD volume, the VHDs size can grow in time as one uses the WSL. Deleting files isn&amp;rsquo;t enough and one has to zero-out the free blocks and run the VHD compaction.
 From WSL2 console:
 mount /dev/sdb -o remount,ro zerofree -v /dev/sdb From the Windows host&amp;rsquo;s Admin powershell:
@@ -43,47 +39,47 @@ mount /dev/sdb -o remount,ro zerofree -v /dev/sdb From the Windows host&amp;rsqu
     
     <item>
       <title>SSHD &amp; Portknock</title>
-      <link>http://anydot.in/post/2019-08-22-sshd-portknock/</link>
+      <link>https://anydot.in/post/2019-08-22-sshd-portknock/</link>
       <pubDate>Thu, 22 Aug 2019 12:07:39 +0000</pubDate>
       
-      <guid>http://anydot.in/post/2019-08-22-sshd-portknock/</guid>
-      <description>[options]UseSyslog[openSSH]sequence = 1,2,3seq_timeout = 5command = /sbin/ipset add sshd -exist %IP%tcpflags = syn-A INPUT -p tcp -m multiport --dports 22 -j f2b-sshd-A INPUT -s 10.0.0.0/8 -p tcp -m tcp --dport 22 -j ACCEPT-A INPUT -p tcp -m tcp --dport 22 -m set --match-set sshd src -j ACCEPT-A INPUT -p tcp -m tcp --dport 22 -j DROPiptables-persistent ipset-persistent</description>
+      <guid>https://anydot.in/post/2019-08-22-sshd-portknock/</guid>
+      <description>[options] UseSyslog [openSSH] sequence = 1,2,3 seq_timeout = 5 command = /sbin/ipset add sshd -exist %IP% tcpflags = syn -A INPUT -p tcp -m multiport --dports 22 -j f2b-sshd -A INPUT -s 10.0.0.0/8 -p tcp -m tcp --dport 22 -j ACCEPT -A INPUT -p tcp -m tcp --dport 22 -m set --match-set sshd src -j ACCEPT -A INPUT -p tcp -m tcp --dport 22 -j DROP iptables-persistent ipset-persistent </description>
     </item>
     
     <item>
       <title>Using autossh, systemd and restirected ssh forwarding for tunneling SMTP</title>
-      <link>http://anydot.in/post/2019-06-11-autossh-systemd-for-smtp-tunneling/</link>
+      <link>https://anydot.in/post/2019-06-11-autossh-systemd-for-smtp-tunneling/</link>
       <pubDate>Tue, 11 Jun 2019 13:25:58 +0000</pubDate>
       
-      <guid>http://anydot.in/post/2019-06-11-autossh-systemd-for-smtp-tunneling/</guid>
+      <guid>https://anydot.in/post/2019-06-11-autossh-systemd-for-smtp-tunneling/</guid>
       <description>&lt;p&gt;I didn&amp;rsquo;t want to turn a full-blow MTA on my RaspberryPI and decided to give the Dragonfly MTA a try. Unfortunately my home DSL line IP block is properly marked as
 a dial-up line and thus Google rejects all the emails I&amp;rsquo;m trying to send to myself :)&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>git clean -fdx for SVN -- how to cleanup untracked files from SVN workdir</title>
-      <link>http://anydot.in/post/2014-12-08-git-clean-fdx-for-svn-how-to-cleanup-untracked-files-from-svn-workdir/</link>
+      <link>https://anydot.in/post/2014-12-08-git-clean-fdx-for-svn-how-to-cleanup-untracked-files-from-svn-workdir/</link>
       <pubDate>Mon, 08 Dec 2014 18:10:00 +0100</pubDate>
       
-      <guid>http://anydot.in/post/2014-12-08-git-clean-fdx-for-svn-how-to-cleanup-untracked-files-from-svn-workdir/</guid>
+      <guid>https://anydot.in/post/2014-12-08-git-clean-fdx-for-svn-how-to-cleanup-untracked-files-from-svn-workdir/</guid>
       <description># Cleanup files untracked by SVN svn status --xml --no-ignore | xmlstarlet sel -t -v &amp;#39;/status/target/entry[wc-status[@item=&amp;#34;unversioned&amp;#34; or @item=&amp;#34;ignored&amp;#34;]][@path!=&amp;#34;.git&amp;#34;]/@path&amp;#39; | xargs rm -fr </description>
     </item>
     
     <item>
       <title>Setting up VirtualBox for NAT DNS</title>
-      <link>http://anydot.in/post/2013-06-21-setting-up-virtualbox-for-nat-dns/</link>
+      <link>https://anydot.in/post/2013-06-21-setting-up-virtualbox-for-nat-dns/</link>
       <pubDate>Fri, 21 Jun 2013 18:10:00 +0100</pubDate>
       
-      <guid>http://anydot.in/post/2013-06-21-setting-up-virtualbox-for-nat-dns/</guid>
+      <guid>https://anydot.in/post/2013-06-21-setting-up-virtualbox-for-nat-dns/</guid>
       <description>Sometimes it can be useful to use host for resolving instead of guest directly contacting DNS network in the current network; in case you are changing DNS servers a lot (imagine notebook and changing networks) or in cases where there&amp;rsquo;s VPN tunnel involved with split-routing; it can be useful to use host for resolving instead of guest directly contacting DNS network in the current network. Note this only works if you use NAT type of network in Virtualbox.</description>
     </item>
     
     <item>
       <title>How to install OpenSSH server on windows</title>
-      <link>http://anydot.in/post/2013-05-30-cygwin-ssh-server/</link>
+      <link>https://anydot.in/post/2013-05-30-cygwin-ssh-server/</link>
       <pubDate>Thu, 30 May 2013 18:10:00 +0100</pubDate>
       
-      <guid>http://anydot.in/post/2013-05-30-cygwin-ssh-server/</guid>
+      <guid>https://anydot.in/post/2013-05-30-cygwin-ssh-server/</guid>
       <description> ccygwin openssh ssh-host-config -y; cygrunsrv -S sshd as Admin * When asked for value of CYGWIN value, enter: tty ntsec * This will create cyg_server local account if it isn&amp;rsquo;t available yet ssh-user-config netsh advfirewall firewall add rule name=&amp;quot;OpenSSH&amp;quot; dir=in action=allow protocol=TCP localport=22 to allow incomming SSH connections  </description>
     </item>
     

@@ -2,21 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Anydot&#39;s blog</title>
-    <link>http://anydot.in/tags/</link>
+    <link>https://anydot.in/tags/</link>
     <description>Recent content in Tags on Anydot&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 May 2020 10:41:18 +0200</lastBuildDate>
-    
-	<atom:link href="http://anydot.in/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 06 May 2020 10:41:18 +0200</lastBuildDate><atom:link href="https://anydot.in/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>wsl</title>
-      <link>http://anydot.in/tags/wsl/</link>
+      <link>https://anydot.in/tags/wsl/</link>
       <pubDate>Wed, 06 May 2020 10:41:18 +0200</pubDate>
       
-      <guid>http://anydot.in/tags/wsl/</guid>
+      <guid>https://anydot.in/tags/wsl/</guid>
       <description></description>
     </item>
     
