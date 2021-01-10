@@ -11,8 +11,8 @@
   <link rel="icon" type="image/x-icon" href="/">
   <link rel="apple-touch-icon" href="/">
   <link rel="canonical" href="https://anydot.in/post/2020-05-07-powershell_profile/">
-<link rel="preload" as="style" href="/bundle.css?v=1605540908" media="all">
-<link rel="stylesheet" href="/bundle.css?v=1605540908" media="all">
+<link rel="preload" as="style" href="/bundle.css?v=1610301058" media="all">
+<link rel="stylesheet" href="/bundle.css?v=1610301058" media="all">
 <style>.cdata pre{color:#edf2f7;background-color:#2d3748}.cdata :not(pre)>code{color:#805ad5;background-color:#f7fafc}.chroma .err{color:#fed7d7;background-color:#9b2c2c}.chroma .hl{background-color:#4a5568}.chroma .ln{color:#a0aec0}.chroma .k,.chroma .kc,.chroma .kd,.chroma .kn,.chroma .kp,.chroma .kr{color:#63b3ed}.chroma .kt{color:#b794f4}.chroma .na{color:#f6e05e}.chroma .nb{color:#f6ad55}.chroma .nc{color:#fc8181}.chroma .no{color:#68d391}.chroma .nd{color:#fc8181}.chroma .ne{color:#fc8181}.chroma .nf{color:#f6ad55}.chroma .nt{color:#fc8181}.chroma .l{color:#b794f4}.chroma .dl,.chroma .ld,.chroma .s,.chroma .s2,.chroma .sa,.chroma .sb,.chroma .sc,.chroma .sd{color:#68d391}.chroma .se{color:#a0aec0}.chroma .s1,.chroma .sh,.chroma .si,.chroma .sr,.chroma .ss,.chroma .sx{color:#68d391}.chroma .il,.chroma .m,.chroma .mb,.chroma .mf,.chroma .mh,.chroma .mi,.chroma .mo{color:#b794f4}.chroma .o,.chroma .ow{color:#90cdf4}.chroma .p{color:#cbd5e0}.chroma .c,.chroma .c1,.chroma .ch,.chroma .cm,.chroma .cp,.chroma .cpf,.chroma .cs{color:#a0aec0}.chroma .ge{font-style:italic}.chroma .gs{font-weight:700}
 </style>
 
@@ -64,11 +64,11 @@
   },
   "datePublished": "2020-05-07T11:33:41Z",
   "dateModified": "2020-05-07T11:33:41Z",
-  "articleBody": "\u003cp\u003ePowershell profile\u003c/p\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre style=\"color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\"\u003e\u003ccode class=\"language-posh\" data-lang=\"posh\"\u003eSet-Alias -Name subl -Value \u003cspan style=\"color:#e6db74\"\u003e\u0026#34;$Env:ProgramFiles\\Sublime Text 3\\subl.exe\u0026#34;\u003c/span\u003e\nSet-PSReadlineKeyHandler -Key Tab -Function Complete\nSet-PSReadlineKeyHandler -Key Ctrl+d -Function DeleteCharOrExit\n\nImport-Module Posh-Git\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e"
+  "articleBody": "\u003cp\u003ePowershell profile - updated 2021/01/10\u003c/p\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre style=\"color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\"\u003e\u003ccode class=\"language-posh\" data-lang=\"posh\"\u003e$global:promptPrefix = \u003cspan style=\"color:#e6db74\"\u003e\u0026#34;PS\u0026#34;\u003c/span\u003e\n\nSet-Alias -Name subl -Value \u003cspan style=\"color:#e6db74\"\u003e\u0026#34;$Env:ProgramFiles\\Sublime Text 3\\subl.exe\u0026#34;\u003c/span\u003e\nSet-PSReadlineKeyHandler -Key Tab -Function Complete\nSet-PSReadlineKeyHandler -Key Ctrl+d -Function DeleteCharOrExit\n\n\u003cspan style=\"color:#66d9ef\"\u003efunction\u003c/span\u003e ADO\n{\n    $global:promptPrefix = \u003cspan style=\"color:#e6db74\"\u003e\u0026#34;ADO\u0026#34;\u003c/span\u003e\n    Set-Location C:\\dev\\ado\\src\n    .\\init.ps1 -KeepPsReadLine $true\n    $ENV:VSInstanceVersion = 16\n    $ENV:EnableHardLinksDuringBuild = \u003cspan style=\"color:#e6db74\"\u003e\u0026#34;true\u0026#34;\u003c/span\u003e \u003cspan style=\"color:#75715e\"\u003e# enable MSBuild optimization\u003c/span\u003e\n}\n\n\u003cspan style=\"color:#66d9ef\"\u003efunction\u003c/span\u003e prompt\n{\n    $prompt = \u003cspan style=\"color:#e6db74\"\u003e\u0026#34;$global:promptPrefix \u003c/span\u003e$($executionContext.SessionState.Path.CurrentLocation)$(\u003cspan style=\"color:#e6db74\"\u003e\u0026#39;\u0026gt;\u0026#39;\u003c/span\u003e * ($nestedPromptLevel + 1))\u003cspan style=\"color:#e6db74\"\u003e \u0026#34;\u003c/span\u003e;\n    $Host.UI.RawUI.WindowTitle = $prompt;\n    \u003cspan style=\"color:#66d9ef\"\u003ereturn\u003c/span\u003e $prompt;\n}\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e"
 }
 </script>
 
-<link rel="preload" as="script" href="/bundle.js?v=1605540908">
+<link rel="preload" as="script" href="/bundle.js?v=1610301058">
 
 
 </head>
@@ -135,12 +135,28 @@
   </div><div class="ax-content ax-l-o">
     <div class="ax-l-i max-w-680">
       <article class="cdata">
-<p>Powershell profile</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-posh" data-lang="posh">Set-Alias -Name subl -Value <span style="color:#e6db74">&#34;$Env:ProgramFiles\Sublime Text 3\subl.exe&#34;</span>
+<p>Powershell profile - updated 2021/01/10</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-posh" data-lang="posh">$global:promptPrefix = <span style="color:#e6db74">&#34;PS&#34;</span>
+
+Set-Alias -Name subl -Value <span style="color:#e6db74">&#34;$Env:ProgramFiles\Sublime Text 3\subl.exe&#34;</span>
 Set-PSReadlineKeyHandler -Key Tab -Function Complete
 Set-PSReadlineKeyHandler -Key Ctrl+d -Function DeleteCharOrExit
 
-Import-Module Posh-Git
+<span style="color:#66d9ef">function</span> ADO
+{
+    $global:promptPrefix = <span style="color:#e6db74">&#34;ADO&#34;</span>
+    Set-Location C:\dev\ado\src
+    .\init.ps1 -KeepPsReadLine $true
+    $ENV:VSInstanceVersion = 16
+    $ENV:EnableHardLinksDuringBuild = <span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#75715e"># enable MSBuild optimization</span>
+}
+
+<span style="color:#66d9ef">function</span> prompt
+{
+    $prompt = <span style="color:#e6db74">&#34;$global:promptPrefix </span>$($executionContext.SessionState.Path.CurrentLocation)$(<span style="color:#e6db74">&#39;&gt;&#39;</span> * ($nestedPromptLevel + 1))<span style="color:#e6db74"> &#34;</span>;
+    $Host.UI.RawUI.WindowTitle = $prompt;
+    <span style="color:#66d9ef">return</span> $prompt;
+}
 </code></pre></div>
       </article>
       
@@ -158,7 +174,7 @@ Import-Module Posh-Git
     </nav>
 
     <div class="footer-copyright text-sm text-center text-gray-500 mt-4">
-      &#169; -2020 Anydot&#39;s blog
+      &#169; -2021 Anydot&#39;s blog
     </div>
     <div class="text-sm sm:text-xs text-center text-gray-500 mt-2">
       Powered by <a href="https://www.axiomtheme.com/?utm_source=theme-footer&utm_medium=website&utm_campaign=referral">Axiom</a>
@@ -166,7 +182,7 @@ Import-Module Posh-Git
   </div>
 </footer>
 
-<script src="/bundle.js?v=1605540908"></script>
+<script src="/bundle.js?v=1610301058"></script>
 
 
 </body>
